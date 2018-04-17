@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>AddressBook</title>
+</head>
+<body>
+<a href="/">Show All Contacts</a><br />
+First Name :<span th:text="${contact.firstName}" ></span><br />
+Last Name :<span th:text="${contact.lastName}" ></span><br />
+Address :<span th:text="${contact.address}" ></span><br />
+Phone :<span th:text="${contact.phone}" ></span><br />
+Email :<span th:text="${contact.email}" ></span><br />
+<a th:href="@{/delete/{id}(id=${contact.id})}">Delete this book</a>
+</body>
+</html>
